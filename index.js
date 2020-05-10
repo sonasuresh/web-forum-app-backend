@@ -31,5 +31,5 @@ app.use('/post', PostRoute);
 
 
 app.listen(4000, () => {
-    console.log('Server Started on PORT ' + 4000)
+    console.log('Server Started on PORT ' + 3000)
 })
