@@ -11,7 +11,7 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 
 //const URL = 'mongodb://127.0.0.1:27017/social_app';
-const URL = 'mongodb+srv://sona:Godisgreat123%23@cluster0-nap9e.mongodb.net/test'
+const URL = 'mongodb://sona:Godisgreat123#@ds161134.mlab.com:61134/heroku_cd2s63lj'
 
 mongoose.connect(URL, { useNewUrlParser: true }, (err) => {
     if (err) {
@@ -31,7 +31,7 @@ app.get('/', function (req, res) {
     res.send("Welcome to Post-In")
 })
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 app.listen(PORT, () => {
     console.log('Server Started on PORT ' + PORT)
