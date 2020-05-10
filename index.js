@@ -9,9 +9,17 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }));
 
 
+const dbdetails = {
+    username: "admin1",
+    password: "admin123",
+    database: "heroku_j00txk4g",
+    host: "ds133281.mlab.com",
+    port: "33281",
+}
+
 
 //const URL = 'mongodb://127.0.0.1:27017/social_app';
-const URL = 'mongodb://sona:Godisgreat123#@ds161134.mlab.com:61134/heroku_cd2s63lj'
+const URL = 'mongodb://' + dbdetails.username + ':' + dbdetails.password + '@' + dbdetails.host + ':' + dbdetails.port + '/' + dbdetails.database;
 
 mongoose.connect(URL, { useNewUrlParser: true }, (err) => {
     if (err) {
