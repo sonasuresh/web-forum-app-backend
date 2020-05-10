@@ -43,7 +43,6 @@ app.get('/', function (req, res) {
     res.send("Welcome to Post-In")
 })
 
-const PORT = process.env.PORT || 4000
 
 app.listen(PORT, () => {
     console.log('Server Started on PORT ' + PORT)
