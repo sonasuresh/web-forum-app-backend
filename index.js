@@ -21,13 +21,13 @@ mongoose.connect(URL, { useNewUrlParser: true }, (err) => {
     }
 })
 
-app.use('/public', express.static('./build'));
 
 const UserRoute = require('./routes/userRoute');
 app.use('/user', UserRoute);
 
 const PostRoute = require('./routes/postRoute');
 app.use('/post', PostRoute);
+app.use('/public', express.static('./build'));
 
 const PORT = process.env.PORT || 3000
 
