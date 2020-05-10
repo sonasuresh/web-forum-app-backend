@@ -21,11 +21,14 @@ mongoose.connect(URL, { useNewUrlParser: true }, (err) => {
     }
 })
 
+app.use('/', express.static('./build'));
+
 const UserRoute = require('./routes/userRoute');
 app.use('/user', UserRoute);
 
 const PostRoute = require('./routes/postRoute');
 app.use('/post', PostRoute);
+
 
 app.listen(4000, () => {
     console.log('Server Started on PORT ' + 4000)
