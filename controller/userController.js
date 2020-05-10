@@ -2,7 +2,6 @@ const User = require('../models/userModel')
 const crypto = require('crypto')
 
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcryptjs');
 const AWS = require('aws-sdk');
 var multer = require('multer')
 

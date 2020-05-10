@@ -10,8 +10,8 @@ app.use(bodyparser.urlencoded({ extended: true }));
 
 
 
-const URL = 'mongodb://127.0.0.1:27017/social_app';
-//const URL = 'mongodb://ucocwljoqjkgvycy2wtp:gRzint5HZm58AXGVixVe@buroxhy2kwwisxo-mongodb.services.clever-cloud.com:27017/buroxhy2kwwisxo'
+//const URL = 'mongodb://127.0.0.1:27017/social_app';
+const URL = 'mongodb+srv://sona:Godisgreat123%23@cluster0-nap9e.mongodb.net/test'
 
 mongoose.connect(URL, { useNewUrlParser: true }, (err) => {
     if (err) {
