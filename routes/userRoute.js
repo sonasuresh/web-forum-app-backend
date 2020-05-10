@@ -30,4 +30,5 @@ router.post('/', userController.avatarupload, userController.addUser);
 
 
 
+
 module.exports = router

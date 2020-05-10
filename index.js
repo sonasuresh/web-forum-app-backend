@@ -27,7 +27,9 @@ app.use('/user', UserRoute);
 
 const PostRoute = require('./routes/postRoute');
 app.use('/post', PostRoute);
-app.use('/public', express.static('./build'));
+app.get('/', function (req, res) {
+    res.send("Welcome to Post-In")
+})
 
 const PORT = process.env.PORT || 3000
 
